@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI in Canada</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #0055a5;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      padding: 20px;
+    }
+    .job-sector {
+      background-color: #ffffff;
+      margin: 10px 0;
+      padding: 10px;
+      border-left: 5px solid #003366;
+      box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+    }
+    iframe {
+      margin-top: 20px;
+      max-width: 100%;
+    }
+    footer {
+      text-align: center;
+      background-color: #003366;
+      color: white;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AI's Impact on Jobs in Canada</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="global.html">Global Trends</a>
+    <a href="canada.html">Canada Impact</a>
+    <a href="solutions.html">Solutions</a>
+  </nav>
+
+  <main>
+    <h2>Canadian Job Sectors Affected by AI</h2>
+    <p>AI is significantly changing the Canadian labor market. While many jobs are being automated, new roles are emerging that demand digital and technical skills. Below are some sectors most affected by automation and intelligent systems:</p>
+
+    <div id="jobList"></div>
+
+    <script>
+      const sectors = [
+        "Manufacturing - Automated robotics replacing factory workers",
+        "Retail - Self-checkouts and online systems reducing cashier roles",
+        "Customer Service - Chatbots and AI replacing call centre jobs",
+        "Transportation - Self-driving vehicles changing trucking and delivery",
+        "Finance - Algorithms managing investments and customer support"
+      ];
+
+      const listContainer = document.getElementById("jobList");
+
+      for (let i = 0; i < sectors.length; i++) {
+        const div = document.createElement("div");
+        div.className = "job-sector";
+        div.textContent = sectors[i];
+        listContainer.appendChild(div);
+      }
+    </script>
+
+    <h3>Key Trends in Canada</h3>
+    <p>According to Statistics Canada, automation is expected to affect over 10% of current jobs. Entry-level and repetitive roles are the most at risk, while high-skill roles like data analysts and AI engineers are growing. Educational institutions and employers are now encouraging digital literacy and STEM (Science, Technology, Engineering, and Math) training.</p>
+
+    <p>Canada is also investing in AI hubs such as Toronto, Montreal, and Vancouver, which are becoming innovation centers for AI research, startups, and tech employment. The Canadian government is also actively funding programs for AI-related upskilling and training.</p>
+
+    <h3>Watch: Understanding AI's Impact on Canadian Workers</h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/u-z4uMzoz8w"
+      title="AI Canada Job Impact" frameborder="0" allow="accelerometer; autoplay;
+      clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+   
+  </main>
+
+  <footer>
+    &copy; 2025 Ritish Gupta | All rights reserved.
+  </footer>
+</body>
+</html>

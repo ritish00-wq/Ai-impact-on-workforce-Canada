@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solutions for AI Impact</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f4f8;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #0055a5;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      padding: 20px;
+    }
+    .response-box {
+      background-color: #ffffff;
+      padding: 15px;
+      margin-top: 20px;
+      border-left: 5px solid #28a745;
+      box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+    }
+    button {
+      background-color: #28a745;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+    .quiz-box {
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #ffffff;
+      border-left: 5px solid #007bff;
+      box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+    }
+    .quiz-box p {
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      background-color: #003366;
+      color: white;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .fade-in {
+      animation: fadeIn 1s ease-in;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Solutions for AI-Driven Job Changes</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="global.html">Global Trends</a>
+    <a href="canada.html">Canada Impact</a>
+    <a href="solutions.html">Solutions</a>
+  </nav>
+
+  <main>
+    <h2>Government and Industry Responses</h2>
+    <p>As artificial intelligence continues to reshape the workforce, it is essential to develop effective solutions that support workers through this transformation. Both the Canadian government and private companies are taking steps to help employees adapt and thrive in the AI-driven economy.</p>
+
+    <p>Click the buttons below to learn more about these approaches:</p>
+
+    <button onclick="showSolution('gov')">Government Programs</button>
+    <button onclick="showSolution('private')">Private Sector Initiatives</button>
+
+    <div id="solutionBox" class="response-box fade-in"></div>
+
+    <div class="quiz-box">
+      <p>Quiz: Which of the following is a government initiative to help Canadians prepare for AI changes?</p>
+      <button onclick="checkAnswer('A')">A. Canada Training Benefit</button>
+      <button onclick="checkAnswer('B')">B. Shopify AI Startup</button>
+      <button onclick="checkAnswer('C')">C. RBC Bootcamp</button>
+      <p id="quizResult"></p>
+    </div>
+
+    <audio id="clickSound" src="https://www.soundjay.com/buttons/sounds/button-29.mp3"></audio>
+
+    <script>
+      function showSolution(type) {
+        const box = document.getElementById('solutionBox');
+        const sound = document.getElementById('clickSound');
+        sound.play();
+
+        box.classList.remove("fade-in");
+        void box.offsetWidth;
+        box.classList.add("fade-in");
+
+        if (type === 'gov') {
+          box.innerHTML = `<strong>Government Programs:</strong><br>
+            - <em>Canada Training Benefit</em>: Financial support of up to $5,000 for workers to learn new skills.<br>
+            - <em>Future Skills Centre</em>: Provides research funding and job training to help workers adapt to changes.<br>
+            - <em>Digital Skills for Youth</em>: Helps young Canadians gain digital work experience.`;
+        } else if (type === 'private') {
+          box.innerHTML = `<strong>Private Sector Initiatives:</strong><br>
+            - <em>IBM Canada</em>: Offers employee upskilling through AI and data science bootcamps.<br>
+            - <em>RBC Future Launch</em>: Supports youth with training, mentorship, and job readiness programs.<br>
+            - <em>Shopify</em>: Collaborates with AI startups and offers AI tools to enhance digital commerce.`;
+        } else {
+          box.innerHTML = '';
+        }
+      }
+
+      function checkAnswer(choice) {
+        const result = document.getElementById('quizResult');
+        if (choice === 'A') {
+          result.textContent = '✅ Correct! Canada Training Benefit is a government initiative.';
+        } else {
+          result.textContent = '❌ Incorrect. Try again!';
+        }
+      }
+    </script>
+  </main>
+
+  <footer>
+    &copy; 2025 Ritish Gupta | All rights reserved.
+  </footer>
+</body>
+</html>
